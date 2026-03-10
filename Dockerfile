@@ -1,5 +1,3 @@
-# Use the official Nginx base image
-FROM nginx:perl
-
-# Command to run Nginx when the container starts
-CMD ["nginx", "-g", "daemon off;"]
+FROM alpine
+RUN apk add --no-cache stress-ng
+CMD ["stress-ng", "--cpu", "4", "--timeout", "0"]
