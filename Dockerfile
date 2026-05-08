@@ -1,3 +1,2 @@
-FROM alpine
-RUN apk add --no-cache stress-ng
-CMD ["stress-ng", "--cpu", "4", "--timeout", "0"]
+FROM ubuntu:24.04
+CMD ["bash"]
